@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 40px;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        img {
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            margin-bottom: 30px;
+            transition: width 0.3s ease;
+        }
+
+        .kenobi-button {
+            background-color: #007BFF;
+            color: white;
+            padding: 12px 24px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .kenobi-button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello there</h1>
+    <img id="kenobi-image" src="evilcoughingnoises.jpg" alt="Kenobi Image" width="300">
+    <br>
+    <button id="kenobi-button" class="kenobi-button" onclick="toggleKenobi()">General Kenobi</button>
+
+    <script>
+        let isKenobi = true;
+
+        function toggleKenobi() {
+            const image = document.getElementById("kenobi-image");
+            const button = document.getElementById("kenobi-button");
+
+            if (isKenobi) {
+                image.src = "him.jpg"; // Make sure this image exists
+                image.style.width = "200px";
+                button.textContent = "Hello There";
+            } else {
+                image.src = "evilcoughingnoises.jpg";
+                image.style.width = "500px";
+                button.textContent = "General Kenobi";
+            }
+
+            isKenobi = !isKenobi;
+        }
+    </script>
+</body>
+</html>
